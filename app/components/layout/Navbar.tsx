@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiSearch, FiMenu, FiX, FiShoppingCart, FiTrash2 } from 'react-icons/fi';
+import { FiMenu, FiX, FiShoppingCart } from 'react-icons/fi';
 import { BsPerson, BsFilterRight } from 'react-icons/bs';
 
 export default function Navbar() {
@@ -30,7 +30,7 @@ export default function Navbar() {
           <div className="hidden md:flex gap-10 text-gray-500 font-sans">
             <Link href="/" className="hover:text-[#1E3333] transition text-black font-bold">Home</Link>
             <Link href="/products" className="hover:text-[#1E3333] transition">Products</Link>
-            <Link href="/contacts" className="hover:text-[#1E3333] transition">Contacts</Link>
+            <Link href="#appointment-section" className="hover:text-[#1E3333] transition">Contacts</Link>
           </div>
         </div>
 
