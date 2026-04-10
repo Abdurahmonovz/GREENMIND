@@ -22,10 +22,10 @@ export default function Appointment() {
     });
 
     if (res.ok) {
-      setStatus("Xabaringiz yuborildi! Tez orada bog'lanamiz ✅");
+      setStatus("Xabaringiz yuborildi! Tez orada boglanamiz ✅");
       (e.target as HTMLFormElement).reset();
     } else {
-      setStatus("Xatolik yuz berdi. Qaytadan urinib ko'ring ❌");
+      setStatus("Xatolik yuz berdi. Qaytadan urinib koring ❌");
     }
     setLoading(false);
   };
@@ -33,7 +33,7 @@ export default function Appointment() {
   return (
     <section className="py-24 px-10 md:px-20 bg-white">
       <div className="max-w-[1100px] mx-auto bg-[#2D3E33] rounded-[40px] overflow-hidden flex flex-col md:flex-row shadow-2xl">
-        {/* Chap tomon - Ma'lumot */}
+       
         <div className="md:w-1/2 p-12 md:p-20 text-white flex flex-col justify-center">
           <motion.h2 
             initial={{ opacity: 0, x: -30 }}
@@ -43,11 +43,10 @@ export default function Appointment() {
             Get an <br /> Appointment
           </motion.h2>
           <p className="text-gray-300 text-lg">
-            Sizga o'simlik tanlashda yoki parvarish qilishda yordam kerakmi? Ma'lumot qoldiring!
+            Sizga osimlik tanlashda yoki parvarish qilishda yordam kerakmi? Malumot qoldiring!
           </p>
         </div>
 
-        {/* O'ng tomon - Forma */}
         <form onSubmit={handleSubmit} className="md:w-1/2 bg-white p-12 md:p-20 space-y-6">
           <div className="space-y-4">
             <input 
