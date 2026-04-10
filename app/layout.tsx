@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google"; 
 import "./globals.css";
+
+
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"], // Sizga kerakli qalinliklar
+  subsets: ["latin"],
+  variable: "--font-poppins",           // CSS o'zgaruvchi nomi
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${poppins.variable} ${geistMono.variable} antialiased`}
       >
+       
         {children}
       </body>
     </html>
   );
 }
+
